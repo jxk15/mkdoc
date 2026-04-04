@@ -7,3 +7,49 @@
     font-family: 'FiraMono';
     src: url('../font/Fira_Mono/FiraMono-Regular.ttf') format('ttf');
 } */
+
+/* hr {
+    border: 0;
+    padding-top: 3px;
+    color: #30edf0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 6px 12px 0px;
+} */
+
+h1, h2, h3, h4, h5 {
+
+    color:darkkhaki;
+
+}
+
+/* h3 {
+
+    color: rgb(237, 217, 33);
+} */
+
+/* Code block / tab in details */
+details>summary+.highlight,
+details>summary+.tabbed-set {
+    margin: 0 -0.6rem !important;
+}
+
+details>summary+.highlight>.highlighttable {
+    margin: 0 !important;
+}
+
+/* Table full width */
+/* .md-typeset__table {
+    display: block !important;
+}
+
+.md-typeset table:not(.highlighttable) {
+    display: table !important;
+} */
+
+
+
+.md-typeset .admonition,
+.md-typeset details {
+
+    font-size: 14.8px;
+}
