@@ -1,0 +1,2161 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="buxizhou">
+      
+      
+        <link rel="canonical" href="https://buxizhou.top/CLRS/chap6/">
+      
+      
+        <link rel="prev" href="../chap5/">
+      
+      
+        <link rel="next" href="../chap7/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
+    
+    
+      
+        <title>第 6 章 堆排序 Exercises & Problems - 不系舟</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Slab";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercises" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="不系舟" class="md-header__button md-logo" aria-label="不系舟" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            不系舟
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 6 章 堆排序 Exercises & Problems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jxk15/CLRS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My CLRS-Solution
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408DS/" class="md-tabs__link">
+          
+  
+  408数据结构
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408COD/" class="md-tabs__link">
+          
+  
+  408计组
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408OS/" class="md-tabs__link">
+          
+  
+  408操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408CN/wireshark/" class="md-tabs__link">
+          
+  
+  408计网
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../preface/" class="md-tabs__link">
+          
+  
+  算法导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OS/reference/" class="md-tabs__link">
+          
+  
+  操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="不系舟" class="md-nav__button md-logo" aria-label="不系舟" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    不系舟
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jxk15/CLRS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My CLRS-Solution
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs 使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            408数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/problemset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刷题记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/LinearList/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 2 章 线性表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/stack-queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 3 章 栈、队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 6 章 图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408计组
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            408计组
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408COD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408COD/memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 章 存储器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408COD/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I/O管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            408操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408OS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408OS/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408OS/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 8 章 IO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408计网
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            408计网
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/wireshark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireShark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/NetworkLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 网络层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    算法导论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            算法导论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 1 部分 基础知识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            第 1 部分 基础知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 算法在计算中的作用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 2 章 算法基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 3 章 函数的增长
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 分治策略
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 5 章 概率分析和随机算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 2 部分 排序和顺序统计量
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            第 2 部分 排序和顺序统计量
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第 6 章 堆排序
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    第 6 章 堆排序
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-堆" class="md-nav__link">
+    6.1 堆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-维护堆的性质" class="md-nav__link">
+    6.2 维护堆的性质
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-建堆" class="md-nav__link">
+    6.3 建堆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-堆排序算法" class="md-nav__link">
+    6.4 堆排序算法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-优先队列" class="md-nav__link">
+    6.5 优先队列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    Problems
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 7 章 快速排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 8 章 线性时间排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 9 章 中位数和顺序统计量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 3 部分 数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            第 3 部分 数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 10 章 基本数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 11 章 散列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 6 部分 图算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            第 6 部分 图算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 22 章 基本的图算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-堆" class="md-nav__link">
+    6.1 堆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-维护堆的性质" class="md-nav__link">
+    6.2 维护堆的性质
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-建堆" class="md-nav__link">
+    6.3 建堆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-堆排序算法" class="md-nav__link">
+    6.4 堆排序算法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-优先队列" class="md-nav__link">
+    6.5 优先队列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    Problems
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>第 6 章 堆排序</h1>
+
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h2 id="61-堆">6.1 堆<a class="headerlink" href="#61-堆" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>最少：在深度 <span class="arithmatex">\(h\)</span> 只有 1 个孩子，有 <span class="arithmatex">\(2^h\)</span> 个元素。最多：深度 <span class="arithmatex">\(h\)</span> 是充满的，有 <span class="arithmatex">\(2^{h+1}-1\)</span> 个元素。</p>
+</li>
+<li>
+<p>显然有 <span class="arithmatex">\(2^{\lfloor\lg n\rfloor }\le 2^{\lg n}=n &lt; 2^{\lfloor\lg n\rfloor + 1}\)</span>，含 <span class="arithmatex">\(2^{\lfloor\lg n\rfloor }\)</span> 和 <span class="arithmatex">\(2^{\lfloor\lg n\rfloor + 1 }-1\)</span> 个元素的堆的高度均为 <span class="arithmatex">\(\lfloor\lg n\rfloor\)</span>，所以 <span class="arithmatex">\(n\)</span> 个元素形成的堆的高度也为 <span class="arithmatex">\(\lfloor\lg n\rfloor\)</span>。</p>
+<p>法二：假设高度为 <span class="arithmatex">\(h\)</span>。</p>
+<ul>
+<li><span class="arithmatex">\(n\le 2^{h+1}-1\)</span>：<span class="arithmatex">\(h\ge \lg(n+1)-1&gt; \lg {n} - 1\)</span></li>
+<li><span class="arithmatex">\(2^h\le n\)</span>：<span class="arithmatex">\(h\le \lg n\)</span>。</li>
+<li>所以 <span class="arithmatex">\(\lg{n}-1 &lt; h \le \lg{n}\)</span>，即 <span class="arithmatex">\(h=\lfloor\lg n\rfloor\)</span>。</li>
+</ul>
+</li>
+<li>
+<p>若最大值只有 1 个不且在子树的根上，则说明该值大于其父结点，与最大堆的性质矛盾。</p>
+<p>若最大值有多个且不在子树的根上，则对于下标最小的最大值结点，一定大于其父结点，与最大堆的性质矛盾。</p>
+</li>
+<li>
+<p>可以在任何一个叶子。</p>
+</li>
+<li>
+<p>是。由于已排序，所以对任意的 <span class="arithmatex">\(i\)</span>，有 <span class="arithmatex">\(A[i]\le A[2i],A[i]\le A[2i+1]\)</span>。</p>
+</li>
+<li>
+<p>不是，6 的右孩子是 7，不满足条件。</p>
+</li>
+<li>
+<p>首先，由堆的性质，知叶结点的下标是连续的，我们只需证明叶结点下标最小是 <span class="arithmatex">\(\lfloor\dfrac{n}{2}\rfloor + 1\)</span>。</p>
+<p><span class="arithmatex">\(n\)</span> 个元素的堆可能是一个完全二叉树，或近似的完全二叉树。若是一个近似的完全二叉树，则下标最大的非叶结点只有左孩子时，<span class="arithmatex">\(n\)</span> 为偶数，有右孩子时 <span class="arithmatex">\(n\)</span> 为奇数。根据这些信息进行分类讨论即可完成证明。</p>
+<p>下面给出更好的证明。设下标最小的叶结点的下标为 <span class="arithmatex">\(i\)</span>，则下标最大的非叶结点的下标为 <span class="arithmatex">\(i-1\)</span>。</p>
+<p>易知 <span class="arithmatex">\(n+1 \le 2i\)</span>，<span class="arithmatex">\(2(i-1)\le n\)</span>，联立得 <span class="arithmatex">\(\dfrac{n+1}{2}\le i \le \dfrac{n+2}{2}\)</span>。</p>
+<p>对 <span class="arithmatex">\(n\)</span> 的奇偶分类讨论得 <span class="arithmatex">\(i=\lfloor\dfrac{n}{2}\rfloor + 1\)</span>。</p>
+<blockquote>
+<p>所以叶结点有 <span class="arithmatex">\(\lceil\dfrac{n}{2}\rceil\)</span> 个。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="62-维护堆的性质">6.2 维护堆的性质<a class="headerlink" href="#62-维护堆的性质" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>略。（不会画动态图</p>
+</li>
+<li>
+<p>将求最大值改成求最小值即可，运行时间显然相同。</p>
+</li>
+<li>
+<p>比较完成后函数结束，不再向下递归。</p>
+</li>
+<li>
+<p>此时下标为 <span class="arithmatex">\(i\)</span> 的结点是叶结点。经过比较后 <span class="arithmatex">\(largest\)</span> 等于 <span class="arithmatex">\(i\)</span>，不再向下递归。</p>
+</li>
+<li>
+<p>尾递归改成循环</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>MAX-HEAPIFY(A, i)
+    while true
+    l = LEFT(i)
+    r = RIGHT(i)
+    if l ≤ A.heap-size and A[l] &gt; A[i]
+        largest = l
+    else largest = i
+    if r ≤ A.heap-size and A[r] &gt; A[largest]
+        largest = r
+    if largest ≠ i
+        exchange A[i] with A[largest]
+        i = largest
+    else return
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>最坏情况时，根结点被交换到最底层的叶结点。由于树的高度为 <span class="arithmatex">\(\lfloor\lg n\rfloor\)</span>，所以最坏情况运行时间为 <span class="arithmatex">\(\Omega(\lg n)\)</span>。</p>
+</li>
+</ol>
+<h2 id="63-建堆">6.3 建堆<a class="headerlink" href="#63-建堆" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>略</p>
+</li>
+<li>
+<p>从 1 递增的话不能保证子结点是最大堆，则 对 MAX-HEAPIFY 的调用是无意义的。</p>
+</li>
+<li>
+<p>证明题</p>
+<blockquote>
+<p>首先明确三个概念，附录 B 中有。</p>
+<p>结点的深度、结点的高度、树的高度</p>
+<p>对于非完全二叉树的堆，从下到上第二层中，有些结点的高度为 1，有些为 0。</p>
+</blockquote>
+<p>令 <span class="arithmatex">\(n_h\)</span> 为高度为 <span class="arithmatex">\(h\)</span> 的结点的数目。</p>
+<p><strong>假设</strong>：<span class="arithmatex">\(n_h\le \lceil\dfrac{n}{2^{h+1}}\rceil\)</span>。</p>
+<p><strong>基本情况</strong>：对于高度为 0 的结点，即叶结点，由练习题 6.1-7 得 <span class="arithmatex">\(n_0=\lceil\dfrac{n}{2}\rceil=\lceil\dfrac{n}{2^{0+1}}\rceil\)</span>。</p>
+<p><strong>归纳</strong>：已知 <span class="arithmatex">\(n_h\le \lceil\dfrac{n}{2^{h+1}}\rceil\)</span>。若 <span class="arithmatex">\(n_h\)</span> 是偶数，则 <span class="arithmatex">\(n_{h+1}=\dfrac{n_h}{2}\le \lceil\dfrac{n}{2^{h+2}}\rceil\)</span>。若 <span class="arithmatex">\(n_h\)</span> 是奇数，则 <span class="arithmatex">\(n_{h+1}=\lfloor\dfrac{n_h}{2}\rfloor + 1=\lceil\dfrac{n_h}{2}\rceil\le \lceil\dfrac{n}{2^{h+2}}\rceil\)</span>。</p>
+</li>
+</ol>
+<h2 id="64-堆排序算法">6.4 堆排序算法<a class="headerlink" href="#64-堆排序算法" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>略</p>
+</li>
+<li>
+<p><strong>初始</strong>：<span class="arithmatex">\(i = n\)</span>，显然成立。</p>
+<p><strong>保持</strong>：在每次迭代中，首先交换 <span class="arithmatex">\(A[1..i]\)</span> 中的最大元素和最小元素 <span class="arithmatex">\(A[1],A[i]\)</span>，所以子数组 <span class="arithmatex">\(A[1..i-1]\)</span> 是一个包含了数组 <span class="arithmatex">\(A[1..n]\)</span> 中前 <span class="arithmatex">\(i-1\)</span> 小元素的最大堆。因为 <span class="arithmatex">\(A[i]\)</span> 比 <span class="arithmatex">\(A[i+1..n]\)</span> 中的元素都小且 <span class="arithmatex">\(A[i+1..n]\)</span> 中的元素已有序，所以 <span class="arithmatex">\(A[i..n]\)</span>  包含前 <span class="arithmatex">\(n-i\)</span> 个最大元素且有序。然后 <span class="arithmatex">\(i\)</span> 递减 1，循环不变量保持成立。</p>
+<p><strong>终止</strong>：<span class="arithmatex">\(i=0\)</span>，子数组 <span class="arithmatex">\(A[1..n]\)</span> 包含前 <span class="arithmatex">\(n\)</span> 个最大元素且已排序。</p>
+</li>
+<li>
+<p>均为 <span class="arithmatex">\(\Theta(n\lg n)\)</span>。第 <span class="arithmatex">\(i\)</span> 次 MAX-HEAPIFY 的时间为 <span class="arithmatex">\(\Theta(\lg i)\)</span>，<span class="arithmatex">\(\displaystyle\sum_{i=2}^{\lfloor n/2\rfloor}\Theta(\lg i)=\Theta(\lg \dfrac{n}{2}!)=\Theta(n\lg n)\)</span>。</p>
+</li>
+<li>
+<p>同上。</p>
+</li>
+<li>
+<p>太难了，打上CLRSHard标记。</p>
+</li>
+</ol>
+<h2 id="65-优先队列">6.5 优先队列<a class="headerlink" href="#65-优先队列" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>略</p>
+</li>
+<li>
+<p>略</p>
+</li>
+<li>
+<p>最小堆实现最小优先队列。伪代码如下。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>HEAP-MINIMUM(A)
+    return A[1]
+//------------------------------------------------------------
+HEAP-EXTRACT-MIN(A)
+    if A.heapsize &lt; 1
+        error&quot;heap underflow&quot;
+    min = A[1]
+    A[1] = A[A.heapsize]
+    A.heapsize = A.heapsize - 1
+    MIN-HEAPIFY(A, 1)
+    return min
+//------------------------------------------------------------
+HEAP-DECREASE-KEY(A, i, key)
+    if key &gt; A[i]
+        error&quot;new key is bigger than current key&quot;
+    A[i] = key
+    while i &gt; 1 and A[PARENT(i)] &gt; A[i]
+        exchange A[i] with A[PARENT(i)]
+        i = PARENT(i)
+//------------------------------------------------------------
+MIN-HEAP-INSERT(A, key)
+    A.heapsize = A.heapsize + 1
+    A[A.heapsize] = ∞
+    HEAP-DECREASE-KEY(A, A.heapsize, key)
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>因为 HEAP-INCREASE-KEY 要求 <span class="arithmatex">\(A[i]\)</span> 的新值必须大于等于旧值。但是在插入时应该使这一要求不可见。</p>
+</li>
+<li>
+<p><strong>初始</strong>：由于 <span class="arithmatex">\(key\)</span> 大于等于 <span class="arithmatex">\(A[i]\)</span> 旧值，所以第一次赋值后以 <span class="arithmatex">\(A[i]\)</span> 为根的子树仍为最大堆。除去以 <span class="arithmatex">\(A[i]\)</span> 为根的子树的部分没有改动，所以也仍是最大堆。所以只有 <span class="arithmatex">\(A[i]&gt; A[\text{PARENT}(i)]\)</span> 会使 <span class="arithmatex">\(A[1..A.heap-size]\)</span> 不满足最大堆性质。</p>
+<p><strong>保持</strong>：在每次迭代中，若 <span class="arithmatex">\(i\)</span> 不是根结点且 <span class="arithmatex">\(A[i]&gt; A[\text{PARENT}(i)]\)</span> 则发生交换，由于 <span class="arithmatex">\(A[\text{PARENT}(i)]\)</span> 大于等于 <span class="arithmatex">\(A[i]\)</span> 旧值，所以交换后以 <span class="arithmatex">\(A[i]\)</span> 为根的子树仍为最大堆。<span class="arithmatex">\(A[\text{PARENT}(i)]\)</span> 的新值大于旧值，所以以 <span class="arithmatex">\(A[\text{PARENT}(i)]\)</span> 为根的子树仍为最大堆。
+除去以 <span class="arithmatex">\(A[\text{PARENT}(i)]\)</span> 为根的子树的部分没有改动，所以也仍是最大堆。然后更新 <span class="arithmatex">\(i\)</span>，循环不变量保持成立。</p>
+<p><strong>终止</strong>：终止时有两种情况。</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(i=1\)</span>，由循环不变量知迭代结束后，以 <span class="arithmatex">\(A[i]\)</span> 为根的子树是一个最大堆，所以 <span class="arithmatex">\(A[1..A.heap-size]\)</span> 满足最大堆性质。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(A[i]\le A[\text{PARENT}(i)]\)</span>，由循环不变量知：以 <span class="arithmatex">\(A[i]\)</span> 为根的子树是一个最大堆；除去以 <span class="arithmatex">\(A[i]\)</span> 为根的子树的部分也是最大堆。所以 <span class="arithmatex">\(A[1..A.heap-size]\)</span> 满足所有的子结点小于等于父结点，所以 <span class="arithmatex">\(A[1..A.heap-size]\)</span> 满足最大堆性质。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>三次赋值优化为一次赋值。伪代码如下</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>HEAP-INCREASE-KEY(A, i, key)
+    if key &lt; A[i]
+        error&quot;new key is smaller than current key&quot;
+    while i &gt; 1 and A[PARENT(i)] &lt; key
+        A[i] = A[PARENT(i)]
+        i = PARENT(i)
+    A[i] = key
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>假设使用最大堆。</p>
+<ul>
+<li>先进先出队列：添加元素时为递减地分配优先级。以优先级作为关键字。</li>
+<li>栈：添加元素时为递增地分配优先级。以优先级作为关键字。</li>
+</ul>
+</li>
+<li>
+<p>最大堆删除操作。伪代码如下。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HEAP-DELETE(A, i)
+    A[i] = A[A.heap-size]
+    A.heap-size = A.heap-size - 1
+    if A[i] &gt; A[PARENT(i)]
+    HEAP-INCREASE-KEY(A, i, A[i])
+    else MAX-HEAPIFY(A, i)
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><span class="arithmatex">\(k\)</span> 路归并，每次从 <span class="arithmatex">\(k\)</span> 个链表各自的最小值中取一个最小的，即动态地在 <span class="arithmatex">\(k\)</span> 个元素中取得最小值。显然可以用最小堆优化。</p>
+<p>在向堆中加入一个元素时，要备注一下该元素来自哪个链表（C 语言中可以通过结构体实现），当该元素取出后，需要从该元素所属链表中取最小值加入堆中。</p>
+<p>堆中元素数量不超过 <span class="arithmatex">\(k\)</span> 个，所以每次添加、取出的时间为 <span class="arithmatex">\(O(\lg k)\)</span>，次数为 <span class="arithmatex">\(O(n)\)</span>。</p>
+<p>所以该算法的时间复杂度为 <span class="arithmatex">\(O(n\lg k)\)</span>。</p>
+<blockquote>
+<p>注意：是 <span class="arithmatex">\(O(n\lg k)\)</span>，不是 <span class="arithmatex">\(O(n\lg n)\)</span>。朴素合并方式的运行时间为 <span class="arithmatex">\(O(nk)\)</span>。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>用插入的方法建堆</p>
+<ol>
+<li>例：输入为 <span class="arithmatex">\(\{1,2,3\}\)</span>。</li>
+<li>在最坏情况下，第 <span class="arithmatex">\(i\)</span> 次插入的时间为 <span class="arithmatex">\(\Theta(\lg i)\)</span>，<span class="arithmatex">\(\displaystyle\sum_{i=2}^{n}\Theta(\lg i)=\Theta(\lg n!)=\Theta(n\lg n)\)</span>。</li>
+</ol>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(d\)</span> 叉堆的分析</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(A[1]\)</span> 仍为根结点。结点 <span class="arithmatex">\(i\)</span> 的父结点 <span class="arithmatex">\(\text{D-ARY-PARENT}(i)=\Big\lfloor\dfrac{i-2}{d+1} \Big\rfloor\)</span>。结点 <span class="arithmatex">\(i\)</span> 的第 <span class="arithmatex">\(j\)</span> 个子结点（<span class="arithmatex">\(1\le j\le d\)</span>）<span class="arithmatex">\(\text{D-ARY-CHILD}(i,j)=d(i-1)+j+1\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Theta(\log_{d}n)\)</span></p>
+</li>
+<li>
+<p>去掉并返回具有最大关键字的元素。伪代码如下。<span class="arithmatex">\(\text{D-ARY-MAX-HEAPIFY}\)</span> 每次执行时需要进行 <span class="arithmatex">\(\Theta(d)\)</span> 次比较，执行次数为 <span class="arithmatex">\(O(\log_{d} n)\)</span>，所以运行时间为 <span class="arithmatex">\(O(d\log_{d}n)\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>D-ARY-EXTRACT-MAX(A)
+    if A.heap-size &lt; 1
+        error&quot;heap underflow&quot;
+    max = A[1]
+    A[1] = A[A.heap-size]
+    A.heap-size = A.heap-size - 1
+    D-ARY-MAX-HEAPIFY(A, 1)
+    return max
+//------------------------------------------------------------
+D-ARY-MAX-HEAPIFY(A, i)
+    largest = i
+    for j = 1 to d
+        child = D-ARY-CHILD(i, j)
+        if child &lt;= A.heap-size and A[child] &gt; A[largest]
+            largest = child
+    if largest ≠ i
+        exchange A[i] with A[largest]
+        D-ARY-MAX-HEAPIFY(A, largest)
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>插入元素。伪代码如下。时间复杂度为 <span class="arithmatex">\(O(\log_{d}n)\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>D-ARY-MAX-HEAP-INSERT(A, key)
+    A.heap-size = A.heap-size + 1
+    A[A.heap-size] = key
+    i = A.heap-size
+    while i &gt; 1 and A[D-ARY-PARENT(i)] &lt; A[i]
+        exchange A[i] with A[D-ARY-PARENT(i)]
+        i = D-ARY-PARENT(i)
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>增加元素的值。伪代码如下。时间复杂度为 <span class="arithmatex">\(O(\log_{d}n)\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>D-ARY-INCREASE-KEY(A, i, key)
+    if key &lt; A[i]
+        error&quot;new key is smaller than current key&quot;
+    A[i] = key
+    while i &gt; 1 and A[D-ARY-PARENT(i)] &lt; A[i]
+        exchange A[i] with A[D-ARY-PARENT(i)]
+        i = D-ARY-PARENT(i)
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Young 氏矩阵</p>
+<ol>
+<li>
+<p>不唯一。</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+    2 &amp; 4 &amp; 9 &amp; \infty \\
+    3 &amp; 8 &amp; 16 &amp; \infty \\
+    5 &amp; 14 &amp; \infty &amp; \infty \\
+    12 &amp; \infty &amp; \infty &amp; \infty
+\end{pmatrix}
+\]</div>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(Y[1,1]=\infty\)</span> 且存在 <span class="arithmatex">\(Y[x,y]\ne \infty\)</span>，则有 <span class="arithmatex">\(Y[x,y] &gt; Y[x,1] &gt; Y[1,1] = \infty\)</span>。产生矛盾。</p>
+<p>若 <span class="arithmatex">\(Y[m,n]&lt;\infty\)</span> 且存在 <span class="arithmatex">\(Y[x,y] = \infty\)</span>，则有 <span class="arithmatex">\(\infty = Y[x,y]&lt;Y[x,n]&lt;Y[m,n]&lt;\infty\)</span>。产生矛盾。</p>
+</li>
+<li>
+<p>首先保存 <span class="arithmatex">\(Y[1,1]\)</span> 的值作为返回值。然后将 <span class="arithmatex">\(Y[1,1]\)</span> 赋值为无穷。</p>
+<p>为了维护杨氏矩阵的性质，把无穷与右邻居、下邻居中较小的交换。直到右邻居、下邻居均为无穷或已移至 <span class="arithmatex">\((m,n)\)</span>。</p>
+<p>时间复杂度：<span class="arithmatex">\(T(p)=T(p-1)+\Theta(1)\)</span>，得 <span class="arithmatex">\(T(p)=O(m+n)\)</span>。</p>
+<blockquote>
+<p>循环不变量与练习 6.5-5 类似</p>
+</blockquote>
+</li>
+<li>
+<p>同上，从 <span class="arithmatex">\((m,n)\)</span> 向 <span class="arithmatex">\((1,1)\)</span> 移动。</p>
+<blockquote>
+<p>循环不变量与练习 6.5-5 类似</p>
+</blockquote>
+</li>
+<li>
+<p>利用前两题的算法，先插入再取出。</p>
+</li>
+<li>
+<p>从右上角出发。设当前位置为 <span class="arithmatex">\((i,j)\)</span>，若 <span class="arithmatex">\(Y[i,j]&gt;key\)</span> ，则说明 <span class="arithmatex">\(Y[i..m, j]\)</span> 的所有元素均大于 <span class="arithmatex">\(key\)</span>，那么我们向左走一步。若 <span class="arithmatex">\(Y[i,j]&lt;key\)</span> ，则说明 <span class="arithmatex">\(Y[i, 1..j]\)</span> 的所有元素均小于 <span class="arithmatex">\(key\)</span>，那么我们向下走一步。</p>
+<p>所以通过 1 次比较，可以排除一行或一列的数据，所以该算法时间复杂度为 <span class="arithmatex">\(O(m+n)\)</span>。</p>
+<p>从左下角出发同理。</p>
+</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2023 buxizhou
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    <br>
+    <a href="http://beian.miit.gov.cn/" style="color: rgb(130, 124, 124);" target="_blank" rel="noopener">
+        豫ICP备2021025356号-2
+    </a>&nbsp;&nbsp;
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41110302000269" style="color: rgb(130, 124, 124);" target="_blank" rel="noopener">
+      豫公网安备 41110302000269号
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/687350506" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

@@ -1,0 +1,9 @@
+.md-typeset blockquote {
+    background: beige;
+
+    /* background-color: rgb(53, 146, 228); */
+}
+/* @font-face {
+    font-family: 'FiraMono';
+    src: url('../font/Fira_Mono/FiraMono-Regular.ttf') format('ttf');
+} */

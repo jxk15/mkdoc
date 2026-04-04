@@ -1,0 +1,2118 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="buxizhou">
+      
+      
+        <link rel="canonical" href="https://buxizhou.top/CLRS/chap5/">
+      
+      
+        <link rel="prev" href="../chap4/">
+      
+      
+        <link rel="next" href="../chap6/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
+    
+    
+      
+        <title>第 5 章 概率分析和随机算法 Exercises & Problems - 不系舟</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Slab";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercises" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="不系舟" class="md-header__button md-logo" aria-label="不系舟" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            不系舟
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 5 章 概率分析和随机算法 Exercises & Problems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jxk15/CLRS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My CLRS-Solution
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408DS/" class="md-tabs__link">
+          
+  
+  408数据结构
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408COD/" class="md-tabs__link">
+          
+  
+  408计组
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408OS/" class="md-tabs__link">
+          
+  
+  408操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408CN/wireshark/" class="md-tabs__link">
+          
+  
+  408计网
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../preface/" class="md-tabs__link">
+          
+  
+  算法导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OS/reference/" class="md-tabs__link">
+          
+  
+  操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="不系舟" class="md-nav__button md-logo" aria-label="不系舟" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    不系舟
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jxk15/CLRS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My CLRS-Solution
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs 使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            408数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/problemset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刷题记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/LinearList/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 2 章 线性表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/stack-queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 3 章 栈、队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408DS/graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 6 章 图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408计组
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            408计组
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408COD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408COD/memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 章 存储器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408COD/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I/O管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            408操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408OS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408OS/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408OS/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 8 章 IO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408计网
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            408计网
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/wireshark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireShark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408CN/NetworkLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 网络层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    算法导论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            算法导论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 1 部分 基础知识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            第 1 部分 基础知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 算法在计算中的作用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 2 章 算法基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 3 章 函数的增长
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 分治策略
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第 5 章 概率分析和随机算法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    第 5 章 概率分析和随机算法
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-雇佣问题" class="md-nav__link">
+    5.1 雇佣问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-指示器随机变量" class="md-nav__link">
+    5.2 指示器随机变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-随机算法" class="md-nav__link">
+    5.3 随机算法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-概率分析和指示器随机变量的进一步使用" class="md-nav__link">
+    5.4 概率分析和指示器随机变量的进一步使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    Problems
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 2 部分 排序和顺序统计量
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            第 2 部分 排序和顺序统计量
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 6 章 堆排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 7 章 快速排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 8 章 线性时间排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 9 章 中位数和顺序统计量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 3 部分 数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            第 3 部分 数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 10 章 基本数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 11 章 散列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 6 部分 图算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            第 6 部分 图算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 22 章 基本的图算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-雇佣问题" class="md-nav__link">
+    5.1 雇佣问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-指示器随机变量" class="md-nav__link">
+    5.2 指示器随机变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-随机算法" class="md-nav__link">
+    5.3 随机算法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-概率分析和指示器随机变量的进一步使用" class="md-nav__link">
+    5.4 概率分析和指示器随机变量的进一步使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    Problems
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>第 5 章 概率分析和随机算法</h1>
+
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h2 id="51-雇佣问题">5.1 雇佣问题<a class="headerlink" href="#51-雇佣问题" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>设应聘者集合 <span class="arithmatex">\(S\)</span> 上的关系 <span class="arithmatex">\(R=\{(a,b):a,b\in S \text{ 且 }a\text{ 与 } b \text{ 同样好或 }a \text{ 比 }b\text{ 更好}\}\)</span>。由「我们总能决定哪一个应聘者最佳」，得 <span class="arithmatex">\(R\)</span> 满足以下三个性质：</p>
+<ol>
+<li>自反性：<span class="arithmatex">\(aRa\)</span></li>
+<li>反对称性：由 <span class="arithmatex">\(aRb \land bRa\)</span> 可得 <span class="arithmatex">\(a=b\)</span></li>
+<li>传递性：由 <span class="arithmatex">\(aRb \land bRc\)</span> 可得 <span class="arithmatex">\(aRc\)</span></li>
+</ol>
+<p>所以 <span class="arithmatex">\(R\)</span> 既是一个偏序关系，也是一个全关系。所以可得到应聘者排名的全部次序。</p>
+</li>
+<li>
+<p>伪代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>RANDOM(a, b)
+   n = ceil(lg(b - a + 1))
+   while true
+      ans = 0
+      for i = 0 to n-1
+      ans = ans + RANDOM(0, 1) &lt;&lt; i
+      if ans &lt;= b-a
+      return a + ans
+</code></pre></div></td></tr></table></div>
+<p>生成区间 <span class="arithmatex">\([a,b]\)</span> 中任一整数的概率均为 <span class="arithmatex">\(\dfrac{1}{b-a+1}\)</span>。</p>
+<p>对每次 while 循环，算法结束的概率为 <span class="arithmatex">\(\dfrac{b-a+1}{2^n}\)</span>，因此 while 循环的次数 <span class="arithmatex">\(X\sim G(\dfrac{b-a+1}{2^n})\)</span>。所以 <span class="arithmatex">\(EX=\dfrac{2^n}{b-a+1}\)</span>。</p>
+<p>所以该算法的期望运行时间为 <span class="arithmatex">\(\Theta(n\dfrac{2^n}{b-a+1})=\Theta(\lg(b-a))\)</span>。</p>
+<blockquote>
+<p>证明：生成区间 <span class="arithmatex">\([a,b]\)</span> 中任一整数的概率均为 <span class="arithmatex">\(\dfrac{1}{b-a+1}\)</span></p>
+<p>令 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\([0,b-a]\)</span> 中的某一整数，事件 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(ans=x\)</span> ，事件 <span class="arithmatex">\(B\)</span> 为算法结束。</p>
+<p>显然 <span class="arithmatex">\(P\{A\}=\dfrac{1}{2^n},P\{B\}=\dfrac{b-a+1}{2^n},P\{B|A\}=1\)</span>。</p>
+<p>由贝叶斯公式得：<span class="arithmatex">\(P\{A|B\}=\dfrac{ P\{A\}P\{B|A\} }{ P\{B\} }=\dfrac{1}{b-a+1}\)</span>。</p>
+</blockquote>
+</li>
+<li>
+<p>伪代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>RANDOM(0, 1)
+    while true
+        x = BIASED-RANDOM()
+        y = BIASED-RANDOM()
+        if(y != x)
+        return x
+</code></pre></div></td></tr></table></div>
+<p>因为 <span class="arithmatex">\(P\{00 | 11\}=p^2 + (1-p)^2,P\{01\}=(1-p)p, P\{10\}=p(1-p)\)</span>。所以结果无偏。</p>
+<p>对每次 while 循环，算法结束的概率为 <span class="arithmatex">\({2p(1-p)}\)</span>，因此 while 循环的次数 <span class="arithmatex">\(X\sim G(2p(1-p))\)</span>。所以 <span class="arithmatex">\(EX=\dfrac{1}{2p(1-p)}\)</span>。</p>
+<p>假设 BIASED-RANDOM 的运行时间为 <span class="arithmatex">\(x\)</span>，该算法的期望运行时间为 <span class="arithmatex">\(\Theta(\dfrac{x}{2p(1-p)})\)</span>。</p>
+</li>
+</ol>
+<h2 id="52-指示器随机变量">5.2 指示器随机变量<a class="headerlink" href="#52-指示器随机变量" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>古典概型</p>
+<ol>
+<li>
+<p>正好雇佣一次：第一个人即为最优选择，概率为 <span class="arithmatex">\(\dfrac{(n-1)!}{n!}=\dfrac{1}{n}\)</span>。</p>
+</li>
+<li>
+<p>正好雇佣 <span class="arithmatex">\(n\)</span> 次：每个应聘者都优于上个应聘者，概率为 <span class="arithmatex">\(\dfrac{1}{n!}\)</span>。</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>定义</strong> 应聘者的排名：对 <span class="arithmatex">\(n\)</span> 位应聘者按优秀程度升序排序，则应聘者的排名为该应聘者从低到高的位数。（最优应聘者的排名为 <span class="arithmatex">\(n\)</span>）</p>
+<p>观察到以下事实：</p>
+<ul>
+<li>第一位应聘者和排名为 <span class="arithmatex">\(n\)</span> 的应聘者都一定会被雇佣。</li>
+<li>雇佣排名为 <span class="arithmatex">\(n\)</span> 的应聘者后，不会再雇佣其他应聘者。</li>
+</ul>
+<p>所以，为了正好雇佣两次，第一个应聘者的排名 <span class="arithmatex">\(i\)</span> 一定是 <span class="arithmatex">\(1\le i\le n-1\)</span>。而且排名为 <span class="arithmatex">\(i+1\sim n-1\)</span> 的应聘者一定在最优应聘者之后出现。</p>
+<p>令事件 <span class="arithmatex">\(E_i\)</span> 为第一个应聘者的排名是 <span class="arithmatex">\(i\)</span>，事件 <span class="arithmatex">\(F_i\)</span> 为最优应聘者在排名为 <span class="arithmatex">\(i+1\sim n-1\)</span> 的应聘者之前出现。则 <span class="arithmatex">\(P\{E_i\}=\dfrac{1}{n}, P\{ F_i|E_i \}=\dfrac{1}{n-i}\)</span>。</p>
+<p>令事件 <span class="arithmatex">\(A\)</span> 为正好雇佣两次。<span class="arithmatex">\(A=\displaystyle\bigcup_{i=1}^{n-1}F_i\cap E_i\)</span>。则</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P\{ A \}
+&amp;= \sum_{i=1}^{n-1}P\{ F_i|E_i \}P\{E_i\} \\
+&amp;= \dfrac{1}{n}\sum_{i=1}^{n-1}\dfrac{1}{n-i}
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>令随机变量 <span class="arithmatex">\(X_i\)</span> 为第 <span class="arithmatex">\(i\)</span> 个骰子的值，随机变量 <span class="arithmatex">\(X\)</span> 为 <span class="arithmatex">\(n\)</span> 个骰子之和。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E[X] &amp;= E\Big[\sum_{i=1}^{n} X_i\Big] \\
+&amp;= \sum_{i=1}^{n}E[X_i] \\
+&amp;= \sum_{i=1}^{n}\sum_{j=1}^{6}j\times P\{ X_i= j\} \\
+&amp;= \sum_{i=1}^{n}\sum_{j=1}^{6}\dfrac{j}{6} \\
+&amp;= 3.5n
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>设随机变量 <span class="arithmatex">\(X_i\)</span> 为当顾客 <span class="arithmatex">\(i\)</span> 拿到自己的帽子时为 1，否则为 0。随机变量 <span class="arithmatex">\(X\)</span> 为拿到自己帽子的顾客数量。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E[X] &amp;= E\Big[ \sum_{i=1}^{n}X_i \Big] \\
+&amp;= \sum_{i=1}^{n}E[X_i]  \\
+&amp;= \sum_{i=1}^{n}\dfrac{1}{n} \\
+&amp;= 1
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(X_{i,j}\)</span> 是一个随机变量，当 <span class="arithmatex">\(i&lt;j\)</span> 且 <span class="arithmatex">\(A[i]&gt;A[j]\)</span> 时 <span class="arithmatex">\(X_{i,j}=1\)</span>，否则为 0。逆序对数目的期望值为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E\Big[ \sum_{i=1}^{n-1}\sum_{j=i+1}^{n} X_{i,j}  \Big] &amp;= \sum_{i=1}^{n-1}\sum_{j=i+1}^{n} E[X_{i,j}]\\
+&amp;= \sum_{i=1}^{n-1}\sum_{j=i+1}^{n} P\{A[i]&gt;A[j] \}\\
+&amp;= \sum_{i=1}^{n-1}\sum_{j=i+1}^{n} \dfrac{1}{2} \\
+&amp;= \dfrac{n(n-1)}{4}
+\end{aligned}
+\]</div>
+</li>
+</ol>
+<h2 id="53-随机算法">5.3 随机算法<a class="headerlink" href="#53-随机算法" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>将循环中的 i 修改为从 2 开始。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>swap A[1] with A[RANDOM(1, n)]
+for i = 2 to n
+    swap A[i] with A[RANDOM(i, n)]
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>没有。排列 <span class="arithmatex">\(&lt;2,1,3,4,\dots,n&gt;\)</span> 出现的概率为 0。</p>
+</li>
+<li>
+<p>不会。</p>
+<p>易知该算法会等概率产生 <span class="arithmatex">\(n^n\)</span> 种交换方式，并对应到 <span class="arithmatex">\(n!\)</span> 个排列。假设对应到某排列的交换方式有 <span class="arithmatex">\(m\)</span> 种，则该排列出现的概率为 <span class="arithmatex">\(\dfrac{m}{n^n}\)</span>。</p>
+<p>若可以产生均匀随机排列，则必有 <span class="arithmatex">\(\dfrac{m}{n^n}=\dfrac{1}{n!}\)</span>，即 <span class="arithmatex">\(\dfrac{n^n}{n!}\)</span> 为整数。当 <span class="arithmatex">\(n\)</span> 为奇数，不符合条件。</p>
+<p>所以不会。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A[i]\)</span> 出现在 <span class="arithmatex">\(B\)</span> 中任何特定位置所需的 <span class="arithmatex">\(offset\)</span> 唯一，而产生任何特定 <span class="arithmatex">\(offset\)</span> 的概率为 <span class="arithmatex">\(\dfrac{1}{n}\)</span>。将数组 <span class="arithmatex">\(A\)</span> 首尾相连，观察到该算法不改变 <span class="arithmatex">\(A\)</span> 中元素的相对位置，也就是说有些排列产生的概率为 0，因此排列结果不是均匀随机排列。</p>
+</li>
+<li>
+<p>假设事件 <span class="arithmatex">\(E_i\)</span> 为第 <span class="arithmatex">\(i\)</span> 个数和 <span class="arithmatex">\([1,i-1]\)</span> 中的数不同。则</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P\Big\{ \bigcap_{i=1}^{n} E_i \Big\} &amp;= P\{ E_1 \}\times P\{ E_2|E_1 \}\times P\{ E_3|E_1\cap E_2 \} \times\cdots\times P\Big\{ E_n\big | \bigcap_{i=1}^{n-1} E_i \Big\}              \\
+&amp;= 1\times \dfrac{n^3-1}{n^3}\times\dfrac{n^3-2}{n^3}\times\cdots \times\dfrac{n^3-(n-1)}{n^3}\\
+&amp;\ge  \dfrac{n^3-n}{n^3}\times\dfrac{n^3-n}{n^3}\times\dfrac{n^3-n}{n^3}\times\cdots \times\dfrac{n^3-n}{n^3}\\
+&amp;= (\dfrac{n^3-n}{n^3})^n = (1-\dfrac{1}{n^2})^n\\
+&amp;\ge 1-\dfrac{1}{n}                 &amp;(\text{伯努利不等式})
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>存在相同的优先级时，从 <span class="arithmatex">\(m\)</span> 个数中取出一个数的概率不再是 <span class="arithmatex">\(\dfrac{1}{m}\)</span>。</p>
+<ul>
+<li>法一：重新生成。</li>
+<li>法二：先对优先级排列，对于相同的优先级再应用 <code>RANDOMIZE-IN-PLACE</code>。解释：假设对优先级 9 生成了 <span class="arithmatex">\(m\)</span> 个，8 生成了 <span class="arithmatex">\(n-m\)</span> 个。则对于 <span class="arithmatex">\(A[i]\)</span>，优先级为 9 的概率为 <span class="arithmatex">\(\dfrac{m}{n}\)</span>。然后对 <span class="arithmatex">\(m\)</span> 个 9 排序，则排第 1 的概率为 <span class="arithmatex">\(\dfrac{1}{m}\)</span>，所以，<span class="arithmatex">\(A[i]\)</span> 的最终位置为 <span class="arithmatex">\(n-m+1\)</span> （从左往右）的概率为 <span class="arithmatex">\(\dfrac{m}{n}\times\dfrac{1}{m}=\dfrac{1}{n}\)</span>。</li>
+</ul>
+<blockquote>
+<p>立即推，放弃 <code>RANDOMIZE-BY-SORTING</code>。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>理解题意</strong>：输入 <span class="arithmatex">\(n,m\)</span>，在 <span class="arithmatex">\(\dbinom{n}{m}\)</span> 个 <span class="arithmatex">\(m\)</span> 集合中等概率（<span class="arithmatex">\(\dfrac{m!(n-m)!}{n!}\)</span>）地选择一个。或者理解为：对 <span class="arithmatex">\(\{1,2,3,\cdots,n\}\)</span> 中的每个数，出现在生成的 <span class="arithmatex">\(m\)</span> 集合中的概率为 <span class="arithmatex">\(\dfrac{m}{n}\)</span>。（<span class="arithmatex">\(\dfrac{m}{n}=\dbinom{n-1}{m-1}\Big/\dbinom{n}{m}\)</span>，包含某个数的 <span class="arithmatex">\(m\)</span> 集合数与所有 <span class="arithmatex">\(m\)</span> 集合数之比为 <span class="arithmatex">\(\dfrac{m}{n}\)</span>）</p>
+<p>题目中提供了一个易于从古典概型角度理解的算法，该算法需要使用 <span class="arithmatex">\(n\)</span> 次 <code>RANDOM</code>。
+但是如果 <span class="arithmatex">\(n\)</span> 比 <span class="arithmatex">\(m\)</span> 大很多，我们希望使用 <span class="arithmatex">\(m\)</span> 次 <code>RANDOM</code> 而不是 <span class="arithmatex">\(n\)</span> 次。</p>
+<p>算法 <code>RANDOM-SAMPLE</code> 显然是调用了 <span class="arithmatex">\(m\)</span> 次 <code>RANDOM</code> 并生成了一个 <span class="arithmatex">\(m\)</span> 集合（因为第 6 行一定可以加入一个新元素）。
+接下来使用数学归纳法说明对 <span class="arithmatex">\(\{1,2,3,\cdots,n\}\)</span> 中的每个数，出现在生成的 <span class="arithmatex">\(m\)</span> 集合中的概率为 <span class="arithmatex">\(\dfrac{m}{n}\)</span>。</p>
+<p><strong>假设</strong>：<code>RANDOM-SAMPLE(m,n)</code> 生成一个 <span class="arithmatex">\(m\)</span> 集合且对 <span class="arithmatex">\(\{1,2,3,\cdots,n\}\)</span> 中的每个数，出现在生成的 <span class="arithmatex">\(m\)</span> 集合中的概率为 <span class="arithmatex">\(\dfrac{m}{n}\)</span>。</p>
+<p><strong>基本情况</strong>：当 <span class="arithmatex">\(m=0,1\)</span>，显然成立。</p>
+<p><strong>归纳</strong>：对于 <code>RANDOM-SAMPLE(m,n)</code>，已知 <code>RANDOM-SAMPLE(m-1,n-1)</code> 会返回一个 <span class="arithmatex">\(m-1\)</span> 集合 <span class="arithmatex">\(S'\)</span>，其中 <span class="arithmatex">\(\{1,2,3,\cdots,n-1\}\)</span> 的每个数出现在 <span class="arithmatex">\(S'\)</span> 的概率为 <span class="arithmatex">\(\dfrac{m-1}{n-1}\)</span>。
+在算法的 4~7 行，向 <span class="arithmatex">\(S'\)</span> 中加入一个 <span class="arithmatex">\(i\)</span>，<span class="arithmatex">\(i\)</span> 小于或等于 <span class="arithmatex">\(n\)</span>，于是得到一个 <span class="arithmatex">\(m\)</span> 集合 <span class="arithmatex">\(S\)</span>。
+令 <span class="arithmatex">\(E_i\)</span> 为第 4 行返回的数为 <span class="arithmatex">\(i\)</span>。
+若 <span class="arithmatex">\(1\le i\le n-1\)</span>，有
+$$
+\begin{aligned}
+P{ i\in S } &amp;= P{ i\in S' } + P{ i\notin S' \land E_i } \
+&amp;= \dfrac{m-1}{n-1}+(1-\dfrac{m-1}{n-1})\dfrac{1}{n} \
+&amp;= \dfrac{m}{n}
+\end{aligned}
+$$</p>
+<p>若 <span class="arithmatex">\(i=n\)</span>，有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P\{ n\in S\} &amp;= P\{ E_n \} + P\{ E_i \land i\in S'(i&lt; n) \} \\
+&amp;= \dfrac{1}{n} + \dfrac{n-1}{n}\dfrac{m-1}{n-1} \\
+&amp;= \dfrac{m}{n}
+\end{aligned}
+\]</div>
+<details class="另一个证明">
+<summary>另一个证明</summary>
+<p><strong>假设</strong>：<code>RANDOM-SAMPLE(m,n)</code> 等可能（<span class="arithmatex">\(1\Big/\dbinom{n}{m}=\dfrac{m!(n-m)!}{n!}\)</span>）生成一个 <span class="arithmatex">\(m\)</span> 集合。</p>
+<p><strong>基本情况</strong>：当 <span class="arithmatex">\(m=0,1\)</span>，显然成立。</p>
+<p><strong>归纳</strong>：令 <code>RANDOM-SAMPLE(m,n)</code> 生成的 <span class="arithmatex">\(m\)</span> 集合为 <span class="arithmatex">\(S\)</span>，令 <span class="arithmatex">\(E_i\)</span> 为第 4 行返回的数为 <span class="arithmatex">\(i\)</span>。分两种情况，</p>
+<ul>
+<li>若 <span class="arithmatex">\(S\)</span> 含元素 <span class="arithmatex">\(n\)</span>，则 <span class="arithmatex">\(S\)</span> 由集合 <span class="arithmatex">\(S'=S-\{n\}\)</span> 转移得到。若已有 <span class="arithmatex">\(S'\)</span>，当 <span class="arithmatex">\(E_n\)</span> 或 <span class="arithmatex">\(E_i\land i\in S'\)</span> 得到 <span class="arithmatex">\(S\)</span>，概率为 <span class="arithmatex">\(\dfrac{1+(m-1)}{n}\)</span>。所以 <span class="arithmatex">\(P\{S\}=P\{S'\}\times \dfrac{m}{n}=1\Big/\dbinom{n-1}{m-1}\times \dfrac{m}{n}=1\Big/\dbinom{n}{m}\)</span>。</li>
+<li>若 <span class="arithmatex">\(S\)</span> 不含元素 <span class="arithmatex">\(n\)</span>，则 <span class="arithmatex">\(S\)</span> 由 <span class="arithmatex">\(m\)</span> 种 <span class="arithmatex">\(m-1\)</span> 集合（从 <span class="arithmatex">\(S\)</span> 中去除一个元素）转移得到。对于每个 <span class="arithmatex">\(m-1\)</span> 集合 <span class="arithmatex">\(S_i\)</span>，当 <span class="arithmatex">\(E_{S-S_i}\)</span> 时得到 <span class="arithmatex">\(S\)</span>，概率为 <span class="arithmatex">\(\dfrac{1}{n}\)</span>。所以 <span class="arithmatex">\(P\{S\}=\sum_{i=1}^{m}P\{S_i\}\times \dfrac{1}{n}=m\times 1\Big/\dbinom{n-1}{m-1}\times \dfrac{1}{n}=1\Big/\dbinom{n}{m}\)</span>。</li>
+</ul>
+</details>
+</li>
+</ol>
+<h2 id="54-概率分析和指示器随机变量的进一步使用">5.4 概率分析和指示器随机变量的进一步使用<a class="headerlink" href="#54-概率分析和指示器随机变量的进一步使用" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>问题 1</strong>：设一年的天数 <span class="arithmatex">\(n=365\)</span>，当房间里有 <span class="arithmatex">\(k\)</span> 个人，这 <span class="arithmatex">\(k\)</span> 个人的生日都和我不同的概率为 <span class="arithmatex">\(\Big(\dfrac{364}{365}\Big)^k\)</span>，所以 <span class="arithmatex">\(1-\Big(\dfrac{364}{365}\Big)^k\)</span> 是存在某人与我生日相同的概率。所以 <span class="arithmatex">\(k\)</span> 至少为 253。</p>
+<p><strong>问题 2</strong>：设一年的天数 <span class="arithmatex">\(n=365\)</span>，当房间里有 <span class="arithmatex">\(k\)</span> 个人，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    &amp;P\{\text{至少两个人生日为 7 月 4 号}\} \\\\
+    = &amp;1-P\{\text{没有人生日为 7 月 4 号}\}-P\{\text{只有一个人生日为 7 月 4 号}\}  \\\\
+    = &amp;1 - \Big(\dfrac{n-1}{n}\Big)^k - \binom{k}{1}\dfrac{1}{n}\Big(\dfrac{n-1}{n}\Big)^{k-1}
+\end{aligned}
+\]</div>
+<p>所以 <span class="arithmatex">\(k\)</span> 至少为 613。</p>
+</li>
+<li>
+<p>该问题等同于生日悖论。</p>
+</li>
+<li>
+<p>由等式 5.6 知两两独立即可。</p>
+</li>
+<li>
+<p>设一年的天数 <span class="arithmatex">\(n=365\)</span>，<span class="arithmatex">\(i\)</span> 的生日为 <span class="arithmatex">\(B_i\)</span>，设随机变量 <span class="arithmatex">\(X_{ijk}\)</span>，当 <span class="arithmatex">\(i,j,k\)</span> 的生日相同时为 1，否则为 0。则 <span class="arithmatex">\(P\{B_i=B_j=B_k\}=\sum_{r=1}^nP\{B_i=B_j=B_k=r\}=\dfrac{1}{n^2}\)</span>。</p>
+<p>当房间内有 <span class="arithmatex">\(m\)</span> 个人时，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E\Big[\sum_{i=1}^m\sum_{j=i+1}^m\sum_{k=j+1}^mX_{ijk}\Big]
+&amp;= \sum_{i=1}^m\sum_{j=i+1}^m\sum_{k=j+1}^mE[X_{ijk}] \\
+&amp;= \sum_{i=1}^m\sum_{j=i+1}^m\sum_{k=j+1}^m\dfrac{1}{n^2} \\
+&amp;= \binom{m}{3}\dfrac{1}{n^2}
+\end{aligned}
+\]</div>
+<p>所以 <span class="arithmatex">\(m\)</span> 至少为 94。</p>
+</li>
+<li>
+<p>构成一个 <span class="arithmatex">\(k\)</span> 排列：<span class="arithmatex">\(k\)</span> 个字符互不相同。该问题是生日悖论的补，等式 5.7 即为该问题的解。</p>
+</li>
+<li>
+<p>设随机变量 <span class="arithmatex">\(X_i\)</span>，当第 <span class="arithmatex">\(i\)</span> 个箱子为空时为 1，否则为 0。则 <span class="arithmatex">\(P\{X_i=1\}=\Big(\dfrac{n-1}{n}\Big)^n\)</span>，随机变量 <span class="arithmatex">\(X\)</span> 为空箱子数目，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E[X] &amp;= E\Big[\sum_{i=1}^n X_i \Big ] \\
+&amp;= \sum_{i=1}^n E[X_i] \\
+&amp;= \sum_{i=1}^n \Big(\dfrac{n-1}{n}\Big)^n \\
+&amp;= \dfrac{n}{e} &amp;(由等式 3.14 得)
+\end{aligned}
+\]</div>
+<p>设随机变量 <span class="arithmatex">\(X_i\)</span>，当第 <span class="arithmatex">\(i\)</span> 个箱子中正好有一个球时为 1，否则为 0。则 <span class="arithmatex">\(P\{X_i=1\}=\dbinom{n}{1}\dfrac{1}{n}\Big(\dfrac{n-1}{n}\Big)^{n-1}=\Big(\dfrac{n-1}{n}\Big)^{n-1}\)</span>，随机变量 <span class="arithmatex">\(X\)</span> 为正好有一个球的箱子的数目，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E[X] &amp;= E\Big[\sum_{i=1}^n X_i \Big ] \\
+&amp;= \sum_{i=1}^n E[X_i] \\
+&amp;= \sum_{i=1}^n \Big(\dfrac{n-1}{n}\Big)^{n-1} \\
+&amp;= \dfrac{n(\frac{n-1}{n}^{n})}{\frac{n-1}{n}} \\
+&amp;= \dfrac{n^2}{e(n-1)}  &amp;(由等式 3.14 得)
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>7</p>
+</li>
+</ol>
+<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>概率计数  <a href="http://home.ustc.edu.cn/~skiper/BigData/2.html">http://home.ustc.edu.cn/~skiper/BigData/2.html</a></p>
+<ul>
+<li>
+<p>设随机变量 <span class="arithmatex">\(X_i\)</span> 为第 <span class="arithmatex">\(i\)</span> 次 INCREMENT 操作使计数器增加的值，随机变量 <span class="arithmatex">\(V_n\)</span> 为 <span class="arithmatex">\(n\)</span> 次 INCREMENT 操作后计数器的值。</p>
+<p>得 <span class="arithmatex">\(E[V_n]=E\Big[\displaystyle\sum_{i=1}^n X_i\Big]=\sum_{i=1}^nE[X_i]\)</span>。</p>
+<p>由题意知 <span class="arithmatex">\(E[X_i]=0\times (1-\dfrac{1}{n_{i+1}-n_i}) + (n_{i+1}-n_i)\times \dfrac{1}{n_{i+1}-n_i}=1\)</span>。</p>
+<p>所以 <span class="arithmatex">\(E[V_n]=n\)</span>。</p>
+</li>
+<li>
+<p>沿用 <span class="arithmatex">\(X_i,V_n\)</span> 的定义。</p>
+<p><span class="arithmatex">\(X_i\)</span> 两两独立，由等式 C.29 得 <span class="arithmatex">\(Var[V_n]=\displaystyle\sum_{i=1}^nVar[X_i]\)</span>。</p>
+<p>由 <span class="arithmatex">\(n_i=100i\)</span>，得 <span class="arithmatex">\(n_{i+1}-n_i=100\)</span>。</p>
+<p>由等式 C.27 得</p>
+<div class="arithmatex">\[
+\begin{aligned}
+Var[X_i] &amp;= E[X_i^2] - E^2[X_i] \\
+&amp;= 0^2\times \dfrac{99}{100} + 100^2\times\dfrac{1}{100} - 1^2 \\
+&amp;= 99
+\end{aligned}
+\]</div>
+<p>所以 <span class="arithmatex">\(Var[V_n]=99n\)</span>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>查找一个无序数组</p>
+<ol>
+<li>
+<p>伪代码如下</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>// 数组 A 中有 n 个元素，待查找值为 x
+RANDOM-SEARCH(A, n, x)
+    bool B[n]  // 初始均为0，B[i] = 0 表示 A[i] 未检查过
+    int m = 0  // A 中检查过的元素个数
+    while m &lt; n
+    i = RANDOM(1, n)
+    if A[i] == x
+        return i
+    else
+        if B[i] == 0
+        B[i] = 1, m = m + 1
+    return NIL
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>每次随机找到 <span class="arithmatex">\(x\)</span> 的概率为 <span class="arithmatex">\(\dfrac{1}{n}\)</span>，符合几何分布，期望为 <span class="arithmatex">\(n\)</span> 次。</p>
+</li>
+<li>
+<p>同 2，期望为 <span class="arithmatex">\(\dfrac{n}{k}\)</span> 次。</p>
+</li>
+<li>
+<p>题意：每个元素都至少选到一次的期望。同 5.4.2 球与箱子，需要 <span class="arithmatex">\(n(\ln n + O(1))\)</span> 次。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x = A[i],1\le i\le n\)</span> 的概率为 <span class="arithmatex">\(\dfrac{1}{n}\)</span>。设随机变量 <span class="arithmatex">\(X\)</span> 为查找次数，则 <span class="arithmatex">\(E[X]=\displaystyle\sum_{i=1}^{n}\dfrac{1}{n}\times i=\dfrac{1+n}{2}\)</span>。最坏情况即为 <span class="arithmatex">\(x=A[n]\)</span>，需要查找 <span class="arithmatex">\(n\)</span> 次。</p>
+</li>
+<li>
+<p>最坏情况即 <span class="arithmatex">\(A[(n-k+1)..n]\)</span> 内均为 <span class="arithmatex">\(x\)</span>，需要查找 <span class="arithmatex">\(n-k+1\)</span> 次。</p>
+<p>平均情况：</p>
+<p><span class="arithmatex">\(\displaystyle\sum_{i=1}^{n-k+1}i\times \dfrac{\dbinom{n-i}{k-1}}{\dbinom{n}{k}}=\dfrac{\dbinom{n+1}{k+1}}{\dbinom{n}{k}}=\dfrac{n+1}{k+1}\)</span></p>
+</li>
+<li>
+<p>显然，平均情况与最坏情况均需查找 <span class="arithmatex">\(n\)</span> 次。</p>
+</li>
+<li>
+<p>为了随机重排，需要 <span class="arithmatex">\(\Theta(n)\)</span> 的运行时间。</p>
+<p><span class="arithmatex">\(k = 0\)</span>，最坏运行时间与运行时间期望均为 <span class="arithmatex">\(O(n)\)</span>。</p>
+<p><span class="arithmatex">\(k = 1\)</span>，最坏运行时间与运行时间期望均为 <span class="arithmatex">\(O(n)\)</span>。</p>
+<p><span class="arithmatex">\(k \ge 1\)</span>，最坏运行时间为 <span class="arithmatex">\(O(n-k+1)+\Theta(n)\)</span>，运行时间期望为 <span class="arithmatex">\(\dfrac{n+1}{k+1}+\Theta(n)\)</span>。</p>
+</li>
+<li>
+<p>综合最坏情况和平均情况的运行时间，我选择第二种算法，即 DETERMINISTIC-SEARCH。</p>
+</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2023 buxizhou
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    <br>
+    <a href="http://beian.miit.gov.cn/" style="color: rgb(130, 124, 124);" target="_blank" rel="noopener">
+        豫ICP备2021025356号-2
+    </a>&nbsp;&nbsp;
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41110302000269" style="color: rgb(130, 124, 124);" target="_blank" rel="noopener">
+      豫公网安备 41110302000269号
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/687350506" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

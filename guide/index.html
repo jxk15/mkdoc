@@ -1,0 +1,2333 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="buxizhou">
+      
+      
+        <link rel="canonical" href="https://buxizhou.top/guide/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
+    
+    
+      
+        <title>学习笔记索引 - 不系舟</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bd3936ea.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Slab";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#计算机学习的第-0-课" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="不系舟" class="md-header__button md-logo" aria-label="不系舟" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            不系舟
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              学习笔记索引
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jxk15/CLRS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My CLRS-Solution
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../408DS/" class="md-tabs__link">
+          
+  
+  408数据结构
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../408COD/" class="md-tabs__link">
+          
+  
+  408计组
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../408OS/" class="md-tabs__link">
+          
+  
+  408操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../408CN/wireshark/" class="md-tabs__link">
+          
+  
+  408计网
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CLRS/preface/" class="md-tabs__link">
+          
+  
+  算法导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../OS/reference/" class="md-tabs__link">
+          
+  
+  操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="不系舟" class="md-nav__button md-logo" aria-label="不系舟" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    不系舟
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jxk15/CLRS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My CLRS-Solution
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs 使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            408数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/problemset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刷题记录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/LinearList/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 2 章 线性表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/stack-queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 3 章 栈、队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408DS/graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 6 章 图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408计组
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            408计组
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408COD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408COD/memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 章 存储器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408COD/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I/O管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            408操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408OS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408OS/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408OS/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 8 章 IO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    408计网
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            408计网
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408CN/wireshark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireShark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408CN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408CN/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408CN/NetworkLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 网络层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    算法导论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            算法导论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/preface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 1 部分 基础知识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            第 1 部分 基础知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 1 章 算法在计算中的作用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 2 章 算法基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 3 章 函数的增长
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 4 章 分治策略
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 5 章 概率分析和随机算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 2 部分 排序和顺序统计量
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            第 2 部分 排序和顺序统计量
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 6 章 堆排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 7 章 快速排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 8 章 线性时间排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 9 章 中位数和顺序统计量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 3 部分 数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            第 3 部分 数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 10 章 基本数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 11 章 散列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 6 部分 图算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            第 6 部分 图算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLRS/chap22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第 22 章 基本的图算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OS/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#计算机学习的第-0-课" class="md-nav__link">
+    计算机学习的第 0 课
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ccpp" class="md-nav__link">
+    C/CPP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#计算理论" class="md-nav__link">
+    计算理论
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#离散数学" class="md-nav__link">
+    离散数学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#数据结构与算法" class="md-nav__link">
+    数据结构与算法
+  </a>
+  
+    <nav class="md-nav" aria-label="数据结构与算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#算导" class="md-nav__link">
+    算导
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#竞赛" class="md-nav__link">
+    竞赛
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#数字电路" class="md-nav__link">
+    数字电路
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#汇编" class="md-nav__link">
+    汇编
+  </a>
+  
+    <nav class="md-nav" aria-label="汇编">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x86-汇编" class="md-nav__link">
+    x86 汇编
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csapp" class="md-nav__link">
+    CSAPP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#微机原理与接口技术" class="md-nav__link">
+    微机原理与接口技术
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#计组" class="md-nav__link">
+    计组
+  </a>
+  
+    <nav class="md-nav" aria-label="计组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#计算机组成结构化方法" class="md-nav__link">
+    计算机组成：结构化方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计算机组成与设计硬件软件接口" class="md-nav__link">
+    计算机组成与设计：硬件/软件接口
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#操作系统" class="md-nav__link">
+    操作系统
+  </a>
+  
+    <nav class="md-nav" aria-label="操作系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#现代操作系统" class="md-nav__link">
+    现代操作系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#计网" class="md-nav__link">
+    计网
+  </a>
+  
+    <nav class="md-nav" aria-label="计网">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#图解-tcpip" class="md-nav__link">
+    图解 TCP/IP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计算机网络-tanenbaum" class="md-nav__link">
+    计算机网络 Tanenbaum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计网项目" class="md-nav__link">
+    计网项目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#数据库" class="md-nav__link">
+    数据库
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmu-15-445" class="md-nav__link">
+    CMU 15-445
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    MySQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#编译原理" class="md-nav__link">
+    编译原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#体系结构" class="md-nav__link">
+    体系结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#嵌入式操作系统" class="md-nav__link">
+    嵌入式操作系统
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>学习笔记索引</h1>
+
+<blockquote>
+<p>几个 B 站 UP：<a href="https://space.bilibili.com/4564101">yaaangmin</a>、<a href="https://space.bilibili.com/305597775">fengmuzi2003</a>、<a href="https://space.bilibili.com/39665558">偶尔有点小迷糊</a></p>
+<p>读书笔记不应该是抄书。</p>
+</blockquote>
+<ol>
+<li>Git<ul>
+<li><a href="https://learngitbranching.js.org/?locale=zh_CN">learngitbranching</a>：可视化学习 git。</li>
+</ul>
+</li>
+<li>linux<ul>
+<li><a href="https://explainshell.com/">explainshell</a>：你是否曾为一段 shell 代码的具体含义感到困扰？manpage 看半天还是不明所以？试试这个网站！</li>
+<li><a href="https://regex101.com/">regex101</a>：正则表达式调试网站，支持各种编程语言的匹配标准。</li>
+</ul>
+</li>
+<li>docker</li>
+</ol>
+<h2 id="计算机学习的第-0-课">计算机学习的第 0 课<a class="headerlink" href="#计算机学习的第-0-课" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Linux</li>
+<li>Git</li>
+<li>GCC、Makefile、CMake、GDB</li>
+</ol>
+<h2 id="ccpp">C/CPP<a class="headerlink" href="#ccpp" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.cnblogs.com/xuelisheng/p/9988626.html">关于 gcc、make 和 CMake 的区别</a></p>
+<p>GCC、Makefile、CMake、GDB</p>
+<ol>
+<li>Essential C++</li>
+<li>C++ Primer/C++程序设计语言，深度探索C++对象模型</li>
+<li>Effective C++，More Effective C++</li>
+<li>STL源码剖析</li>
+</ol>
+<p>Java</p>
+<p>2023-02：Java太卷了。不想学了。</p>
+<h2 id="计算理论">计算理论<a class="headerlink" href="#计算理论" title="Permanent link">&para;</a></h2>
+<p>计算理论导引 <a href="https://chengzhaoxi.xyz/422af7d7.html">https://chengzhaoxi.xyz/422af7d7.html</a></p>
+<h2 id="离散数学">离散数学<a class="headerlink" href="#离散数学" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>参考书：离散数学及其应用、具体数学</p>
+</blockquote>
+<p><strong>学什么</strong></p>
+<p>图片来源：<a href="https://www.zhihu.com/question/38040913/answer/844234508">https://www.zhihu.com/question/38040913/answer/844234508</a></p>
+<p><a class="glightbox" href="https://picx.zhimg.com/80/v2-e1a4c6dd78598f4edbf48f784c712730_720w.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://picx.zhimg.com/80/v2-e1a4c6dd78598f4edbf48f784c712730_720w.webp" /></a></p>
+<p>在我的离散数学笔记中，包含：数理逻辑、集合论、代数结构、组合数学、初等数论、关系、离散概率、计算模型、归纳与递归、和式。</p>
+<p>图论、渐进式放在算法笔记中。</p>
+<h2 id="数据结构与算法">数据结构与算法<a class="headerlink" href="#数据结构与算法" title="Permanent link">&para;</a></h2>
+<h3 id="算导">算导<a class="headerlink" href="#算导" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>参考书：算法导论（第三版）、<a href="https://book.douban.com/subject/19952400/">算法</a>、<a href="https://book.douban.com/subject/33419792/">数据结构与算法分析</a>、<a href="https://book.douban.com/subject/1886174/">数据结构</a></p>
+<p>《算法》使用了 Java 来描述算法。感觉完全没必要。伪代码足矣</p>
+</blockquote>
+<p><a href="https://buxizhou.top/posts/440cba7.html">前言</a></p>
+<p>第一部分：基础知识</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">算法在计算中的作用</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">算法基础</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/72c6c4e2.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">函数的增长</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/fdb9ecdf.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">分治策略</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/dd62e66f.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">概率分析和随机算法</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/97451758.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>第二部分：排序和顺序统计量</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">堆排序</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/8e4a2756.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">快速排序</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/93a4cf0e.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">线性时间排序</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/4948863e.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">中位数和顺序统计量</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/625de5ab.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>第三部分：数据结构</p>
+<p>第 10 章写的真不太行。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">基本数据结构</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/af388108.html">solution</a></td>
+<td style="text-align: center;">10.4-5</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">散列表</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/ea48f2b0.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">二叉搜索树</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">红黑树</td>
+<td style="text-align: center;"><a href="https://buxizhou.top/posts/.html">solution</a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">数据结构扩张</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>第四部分：高级设计和分析技术</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">动态规划</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">贪心算法</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">摊还分析</td>
+<td style="text-align: center;">未完工</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>第五部分：高级数据结构</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">B树</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">斐波那契堆</td>
+<td style="text-align: center;">4e 中移至线上</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">van Emde Boas树</td>
+<td style="text-align: center;">4e 中移至线上</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">用于不相交集合的数据结构</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>第六部分：图算法</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">基本的图算法</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">最小生成树</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">单源最短路径</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">所有结点对的最短路径问题</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">最大流</td>
+<td style="text-align: center;">未完工</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>第七部分：算法问题选讲</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">序号</th>
+<th style="text-align: center;">内容</th>
+<th style="text-align: center;">Exercises &amp; Problems</th>
+<th style="text-align: center;">笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">多线程算法</td>
+<td style="text-align: center;">未完工</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">矩阵运算</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">线性规划</td>
+<td style="text-align: center;">未完工</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">多项式与快速傅里叶变换</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">数论算法</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">字符串匹配</td>
+<td style="text-align: center;">solution</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">计算几何学</td>
+<td style="text-align: center;">4e 中移至线上</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">NP完全性</td>
+<td style="text-align: center;">未完工</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">近似算法</td>
+<td style="text-align: center;">未完工</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="竞赛">竞赛<a class="headerlink" href="#竞赛" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>主要看各路大佬的博客</p>
+</blockquote>
+<p>初等数论</p>
+<p>组合数学</p>
+<p>DP</p>
+<p>数据结构：<a href="https://www.luogu.com.cn/blog/ProtectEMmm/shuo-ju-jie-gou-xia-che">https://www.luogu.com.cn/blog/ProtectEMmm/shuo-ju-jie-gou-xia-che</a></p>
+<p>字符串</p>
+<p>图论</p>
+<h2 id="数字电路">数字电路<a class="headerlink" href="#数字电路" title="Permanent link">&para;</a></h2>
+<h2 id="汇编">汇编<a class="headerlink" href="#汇编" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>由于 x86 沉重的历史包袱，系统地学习 x86 汇编并不容易。
+如果你选择了 RISC-V 或 MIPS，那么你将少很多烦恼。
+<a href="https://www.zhihu.com/question/22193700/answer/20591459">汇编指令集与cpu指令集是什么关系？</a>、<a href="https://zhuanlan.zhihu.com/p/95028674">一文看懂arm架构和x86架构有什么区别</a></p>
+<p>在线编译器：<a href="https://godbolt.org">https://godbolt.org</a>。对于 GCC 编译器，使用编译命令 <code>-masm=att</code> 或 <code>-masm=intel</code> 指定生成 ATT 或 Intel 格式的汇编代码。</p>
+<p>参考书目（优先级从高到低）：<a href="https://book.douban.com/subject/26769528">汇编语言 基于 x86 处理器</a>、<a href="https://book.douban.com/subject/7059709">汇编语言的编程艺术</a>、<a href="https://book.douban.com/subject/33406849">汇编程序设计与计算机体系结构：软件工程师教程</a></p>
+</blockquote>
+<p>RISC 精简指令集（reduced instruction set computer）：RISC-V、MIPS、ARM
+CISC 复杂指令集（complex instruction set computer）：x86</p>
+<h3 id="x86-汇编">x86 汇编<a class="headerlink" href="#x86-汇编" title="Permanent link">&para;</a></h3>
+<p>王爽《汇编语言》—— B站视频：<a href="https://www.bilibili.com/video/BV1mt411R7Xv">汇编语言从0开始</a>。小白也能无压力看懂</p>
+<p>环境配置：<a href="https://zhuanlan.zhihu.com/p/149110574">如何在win10环境下搭载Dosbox-0.74以及debug运行调试</a>
+笔记：<a href="https://buxizhou.top/posts/43668f53.html">王爽《汇编语言》</a></p>
+<p>李忠《从实模式到保护模式》</p>
+<blockquote>
+<p>推荐本书第二版</p>
+</blockquote>
+<p>笔记：</p>
+<p>现代汇编</p>
+<p>参考书：<a href="https://book.douban.com/subject/35543153">现代 x86 汇编语言程序设计</a></p>
+<h2 id="csapp">CSAPP<a class="headerlink" href="#csapp" title="Permanent link">&para;</a></h2>
+<p>CMU 15-213 CMU课程网页：<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html">课件</a>、<a href="http://csapp.cs.cmu.edu/3e/labs.html">labs</a></p>
+<blockquote>
+<ol>
+<li><a href="https://csapp3e.gitee.io/yiligong_homepage/csapp3e/index.html">中文版勘误</a></li>
+<li>在线编译器：<a href="https://godbolt.org">https://godbolt.org</a>。对于 GCC 编译器，使用编译命令 <code>-masm=att</code> 或 <code>-masm=intel</code> 指定生成 ATT 或 Intel 格式的汇编代码。</li>
+<li>导读视频：<a href="https://www.bilibili.com/video/BV1RK4y1R7Kf">CSAPP重点导读（更新完毕）</a>、<strong>网站</strong>：<a href="https://fengmuzi2003.gitbook.io/csapp3e/">CSAPP重点导读</a></li>
+<li>知乎大佬的 lab 笔记：<a href="https://www.zhihu.com/column/c_1458204480777273344">配置csapp所有lab环境并高分通过</a></li>
+<li>知乎大佬的笔记：<a href="https://zhuanlan.zhihu.com/p/264938662">CSAPP专栏</a> 、一篇回答：<a href="https://www.zhihu.com/question/20402534/answer/1518993161">如何阅读《深入理解计算机系统》这本书？</a></li>
+<li><a href="https://www.zhihu.com/column/c_1480603406519238656">大毛哥的笔记</a></li>
+<li><a href="https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html">南京大学 计算机系统基础 课程实验 2021</a></li>
+</ol>
+</blockquote>
+<p>笔记：
+<a href="https://buxizhou.top/posts/65a163a6.html">CSAPP前言</a>
+<a href="https://buxizhou.top/posts/c16a2c8a.html">CSAPP：第1章 计算机系统漫游</a>
+<a href="https://buxizhou.top/posts/f80ffd56.html">CSAPP：第2章 信息的表示和处理</a>
+<a href="https://buxizhou.top/posts/3c8b1ddf.html">CSAPP：第3章 程序的机器级表示</a>
+<a href="https://buxizhou.top/posts/6956fe66.html">CSAPP：第4章 处理器体系结构</a></p>
+<blockquote>
+<p>第4章补充：《计算机组成与设计：硬件/软件接口》
+第6章补充：《What Every Programmer Should Know About Memory》
+第7章补充：《程序员的自我修养：链接、装载与库》
+第8、10、11、12章补充：《UNIX环境高级编程》</p>
+</blockquote>
+<h2 id="微机原理与接口技术">微机原理与接口技术<a class="headerlink" href="#微机原理与接口技术" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ol>
+<li>中科大：<a href="http://home.ustc.edu.cn/~ytwang/">微机原理课程 PPT</a>、<a href="http://staff.ustc.edu.cn/~wangqq/">微机原理与接口技术实验</a></li>
+<li><a href="http://www.weijiyuanli.cn/">微机原理教学资源</a></li>
+</ol>
+</blockquote>
+<h2 id="计组">计组<a class="headerlink" href="#计组" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>参考书：<a href="https://book.douban.com/subject/6398113/">计算机组成与体系结构——性能设计</a>、计算机组成——结构化方法</p>
+</blockquote>
+<p>UCB CS61C：C、RISC-V</p>
+<h3 id="计算机组成结构化方法">计算机组成：结构化方法<a class="headerlink" href="#计算机组成结构化方法" title="Permanent link">&para;</a></h3>
+<p>推荐本书前四章，后面内容有些过时/不如其他书。</p>
+<p>第三章是数字逻辑：讲了 ALU、触发器、寄存器、内存等的门电路实现。</p>
+<p>第四章详细讲了一个用<strong>微程序控制器</strong>实现的CPU，讲了每个时钟周期发生的事情。并从单周期优化到到流水线。但流水线部分不够详细。</p>
+<h3 id="计算机组成与设计硬件软件接口">计算机组成与设计：硬件/软件接口<a class="headerlink" href="#计算机组成与设计硬件软件接口" title="Permanent link">&para;</a></h3>
+<h2 id="操作系统">操作系统<a class="headerlink" href="#操作系统" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.zhihu.com/question/270998611">你当初是如何学会操作系统这门课程的？</a>
+<a href="https://www.zhihu.com/question/31931066/answer/125919138">这几本操作系统的经典书籍各自偏重点和特点是什么？有点不知道怎么选了。?</a></p>
+<blockquote>
+<p>参考书：<a href="https://book.douban.com/subject/2044818/">操作系统设计与实现</a>、<a href="https://book.douban.com/subject/5064311/">操作系统精髓与设计原理</a>、<a href="https://book.douban.com/subject/30297919/">操作系统概念</a>、<a href="https://book.douban.com/subject/6097773/">Linux 内核设计与实现</a>、<a href="https://book.douban.com/subject/30391722/">操作系统原理 实现与实践</a>、<a href="https://book.douban.com/subject/30222325/">一个64位操作系统的设计与实现</a>、<a href="https://book.douban.com/subject/26745156/">操作系统真象还原</a></p>
+<p><a href="https://nankai.gitbook.io/ucore-os-on-risc-v64/#shi-yan-zong-ti-liu-cheng">uCore OS(on RISC-V64)实验指导书</a>
+<a href="https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf">xv6（on RISC-V）教程</a>：详细讲解了 xv6 的设计思想和实现细节</p>
+<p>操作系统导论（OSTEP）：中文版翻译好垃圾。</p>
+</blockquote>
+<p>NJU 蒋炎岩
+MIT 6.S081：C，RISC-V，xv6
+UCB CS162：C，x86，PintOS</p>
+<h3 id="现代操作系统">现代操作系统<a class="headerlink" href="#现代操作系统" title="Permanent link">&para;</a></h3>
+<h2 id="计网">计网<a class="headerlink" href="#计网" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>图解网络硬件、图解 TCP/IP</strong>、图解 HTTP、<strong>计算机网络（坦尼鲍姆）</strong>、自顶向下、TCP/IP：卷一</p>
+</blockquote>
+<p><a href="https://docs.oracle.com/cd/E19253-01/819-7058/ipov-10/index.html">TCP/IP 协议体系结构模型</a>
+<a href="https://www.51cto.com/article/604277.html">你学习的TCP/IP协议栈到底是几层？</a>
+湖科大
+USTC 郑烇
+Stanford CS144</p>
+<!--
+
+网络是怎样连接的
+
+> 略读，构建框架
+> 混乱，这边先蹦出来个名词，不解释，就开始满天飞地用了，到后面几页才解释，很影响理解、恶心；前面提一句某知识点，然后没了，也理解不了，莫名其妙的，真恶心；有些句子主语不清晰；有些描述的时间线错误，影响理解；
+> TCP/IP 协议层次清晰，但这本书层次就很不清晰，各种前后交叉。你到底是写给大众看呢还是给程序员看呢？
+> 废话真多，举个例子啰里吧嗦的
+
+笔记：
+[网络是怎样连接的——第 1、2、3 章](https://buxizhou.top/posts/db8e30b1.html)
+[网络是怎样连接的——第 4、5、6 章]()
+
+-->
+
+<h3 id="图解-tcpip">图解 TCP/IP<a class="headerlink" href="#图解-tcpip" title="Permanent link">&para;</a></h3>
+<h3 id="计算机网络-tanenbaum">计算机网络 Tanenbaum<a class="headerlink" href="#计算机网络-tanenbaum" title="Permanent link">&para;</a></h3>
+<h3 id="计网项目">计网项目<a class="headerlink" href="#计网项目" title="Permanent link">&para;</a></h3>
+<p>Github：<a href="https://github.com/EZLippi/Tinyhttpd">C语言 HTTP项目</a>  500 行代码</p>
+<h2 id="数据库">数据库<a class="headerlink" href="#数据库" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.cnblogs.com/Brambling/p/6725859.html">SQL Server创建存储过程——动态SQL</a>
+<a href="https://www.cnblogs.com/f-ck-need-u/p/7592501.html">MySQL基本语法(一)：和SQL Server语法的差异小归纳</a></p>
+<h3 id="cmu-15-445">CMU 15-445<a class="headerlink" href="#cmu-15-445" title="Permanent link">&para;</a></h3>
+<h3 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
+<h2 id="编译原理">编译原理<a class="headerlink" href="#编译原理" title="Permanent link">&para;</a></h2>
+<p>B站大佬（lazyparser）：<a href="https://www.bilibili.com/video/BV1gY4y1E7Ue">徒手写一个 RISC-V 编译器！初学者友好的实战课程</a></p>
+<h2 id="体系结构">体系结构<a class="headerlink" href="#体系结构" title="Permanent link">&para;</a></h2>
+<p>UCB cs151、cs152</p>
+<h2 id="嵌入式操作系统">嵌入式操作系统<a class="headerlink" href="#嵌入式操作系统" title="Permanent link">&para;</a></h2>
+<p><a href="https://keyou.github.io/blog/2017/09/13/一个应用软件工程师对嵌入式系统的理解">一个应用软件工程师对嵌入式系统的理解</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2023 buxizhou
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    <br>
+    <a href="http://beian.miit.gov.cn/" style="color: rgb(130, 124, 124);" target="_blank" rel="noopener">
+        豫ICP备2021025356号-2
+    </a>&nbsp;&nbsp;
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41110302000269" style="color: rgb(130, 124, 124);" target="_blank" rel="noopener">
+      豫公网安备 41110302000269号
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/687350506" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6eac0284.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
