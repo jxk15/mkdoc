@@ -2,302 +2,266 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://buxizhou.top/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/guide/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/mkdoc/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408CN/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://buxizhou.top/408CN/ApplicationLayer/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408CN/LinkLayer/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408CN/NetworkLayer/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
-         <loc>https://buxizhou.top/408CN/TransportLayer/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://buxizhou.top/408CN/applicationLayer/</loc>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408CN/introduction/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/408CN/transportLayer/</loc>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408CN/wireshark/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408COD/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408COD/ALU/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408COD/IO/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408COD/bus/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408COD/instruction/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408COD/memory/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/LinearList/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/graph/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/introduction/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/problemset/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/search/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/sort/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/stack-queue/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/string/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408DS/tree/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408OS/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408OS/IO/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408OS/fileSystem/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408OS/introduction/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408OS/memory/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408OS/process/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408%E7%9C%9F%E9%A2%98/2009/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408%E7%9C%9F%E9%A2%98/2012/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/408%E7%9C%9F%E9%A2%98/2021/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/Algo4e/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap1/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap10/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap11/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap12/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap13/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap18/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap2/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap22/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap23/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap24/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap3/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap4/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap5/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap6/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap7/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap8/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/chap9/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/preface/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/CLRS/reference/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/COD%26OS/1/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/OS/jyyOS/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/OS/reference/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/PoliticalPhilosophy/%E4%BB%8E%E7%A7%81%E4%BA%BA%E6%84%8F%E8%AF%86%E5%87%BA%E5%8F%91/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/PoliticalPhilosophy/%E5%85%B3%E4%BA%8E%E5%8E%86%E5%8F%B2%E8%BF%9B%E6%AD%A5%E4%B8%BB%E4%B9%89/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/PoliticalPhilosophy/%E5%85%B3%E4%BA%8E%E6%94%BF%E6%B2%BB%E5%93%B2%E5%AD%A6%E7%9A%84%E5%88%86%E6%AD%A7/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/PoliticalPhilosophy/%E6%80%BB%E8%A7%88%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/PoliticalPhilosophy/%E6%A2%B3%E7%90%86%E6%96%BD%E7%89%B9%E5%8A%B3%E6%96%AF%E6%94%BF%E6%B2%BB%E6%80%9D%E6%83%B3%E5%8F%B2_2026-09-26/</loc>
+         <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://buxizhou.top/PoliticalPhilosophy/%E8%AF%BB%E5%8F%96%E5%AF%B9%E8%AF%9D%E5%A4%B1%E8%B4%A5_2026-09-26/</loc>
+         <lastmod>2026-09-30</lastmod>
     </url>
     <url>
          <loc>https://buxizhou.top/competitive_programming/reference/</loc>
-         <lastmod>2026-04-04</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2026-09-30</lastmod>
     </url>
 </urlset>
